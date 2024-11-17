@@ -1,15 +1,18 @@
 /* Global styles */
 body {
-  color: #524f4f;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
+  color: #565656;
+  font-family: "Gurajada", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 header,
 article,
 footer {
-  background: #F5C4C4;
-  /* Add Flexbox properties to create parent flex containers and to center the content-wrapper */
+  background: #e1fffa;
+  display: flex;
+  justify-content: center;
 }
 
 .content-wrapper {
@@ -23,28 +26,46 @@ header {
 }
 
 header .content-wrapper {
-  /* Add Flexbox properties to make the "content-wrapper" a parent flex container and to center the h1 on a mobile site */
+  display: flex;
+  justify-content: left;
 }
 
 h1 {
-  font-family: 'Play', sans-serif;
+  font-family: "Palanquin Dark", sans-serif;
   /* Font-size can be adjusted for mobile so that your name fits on a single row. */
   font-size: 3rem;
+  color: #5C6B68;
+  border: rgba(00, 0, 0, 0.44) 0px 3px 8px;
+}
+
+h1 .first-name {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h2 {
-  font-family: 'Play', sans-serif;
+  font-family: "Livvic", sans-serif;
   font-size: 2rem;
 }
 
+p .first-name{
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .75em;
+}
 /* Main styles */
 
 article .content-wrapper {
-  /* Add Flexbox properties to center the elements and cause them to wrap so that the image is above the text. */
-  background: rgba(252, 240, 240, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 65%;
+  background: rgba(26, 32, 31, 0.32);
   padding: 70px 0;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  box-shadow: rgba(10, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .profile-image-container {
@@ -62,7 +83,7 @@ article .content-wrapper {
 .profile-description {
   width: 80%;
   padding-bottom: 20px;
-  border-bottom: 5px solid #F5C4C4;
+  border-bottom: 5px solid #e1fffa;
 }
 
 /* Footer styles */
@@ -71,26 +92,28 @@ footer {
 }
 
 footer .content-wrapper {
-  /* Add Flexbox properties to make the "content-wrapper" a parent flex container and to center the copyright */
+display: flex;
+justify-content: right;
 }
 
 @media (min-width: 768px) {
 
   header .content-wrapper {
-    /* Add Flexbox properties to move the h1 to the left at the start of the content-wrapper */
+    justify-content: flex-start;
   }
 
   article .content-wrapper {
-    /* Add Flexbox properties so that the extra space in the content-wrapper is around the child items and align them at their centers */
+    justify-content: space-around;
+    align-items: center;
   }
 
   .profile-image-container {
-    width: 30%;
+    width: 25%;
     padding-bottom: 0;
   }
 
   .profile-description {
-    width: 45%;
+    width: 55%;
   }
 
 }
